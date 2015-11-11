@@ -167,7 +167,7 @@
                         renderPinItButton();
                     }
                     
-                    scope.$watch('pinItUrl', function(nv, ov) {
+                    scope.$watch('pinIt+pinItImage+pinItUrl', function(nv, ov) {
                     if (nv != ov) {
                         renderPinItButton();
                     }
