@@ -166,6 +166,12 @@
                     } else {
                         renderPinItButton();
                     }
+                    
+                    scope.$watch('pinItUrl', function(nv, ov) {
+                    if (nv != ov) {
+                        renderPinItButton();
+                    }
+                });
                     var watchAdded = false;
 
                     function renderPinItButton() {
