@@ -15,7 +15,7 @@
                     // Load Facebook SDK if not already loaded
                     $.getScript('//connect.facebook.net/pt_BR/sdk.js', function() {
                         $window.FB.init({
-                            appId: setting.store.facebook.appId, //@todo make me an attribute
+                            //appId: setting.store.facebook.appId, //@todo make me an attribute
                             xfbml: true,
                             version: 'v2.3'
                         });
