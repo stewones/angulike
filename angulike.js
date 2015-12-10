@@ -135,8 +135,8 @@
                 }
             };
         }
-    ]).directive('pinIt', ['$window', '$location',
-        function($window, $location) {
+    ]).directive('pinIt', ['$window', '$location','$timeout',
+        function($window, $location, $timeout) {
             return {
                 restrict: 'A',
                 scope: {
@@ -188,7 +188,10 @@
                             return;
                         } else {
                             element.html('<a href="//www.pinterest.com/pin/create/button/?url=' + (scope.pinItUrl || $location.absUrl()) + '&media=' + scope.pinItImage + '&description=' + scope.pinIt + '" data-pin-do="buttonPin" data-pin-config="beside"></a>');
+                           $timeout(function(){
                             $window.parsePins(element.parent()[0]);
+                        }, 2000)
+                            
                         }
                     }
                 }
